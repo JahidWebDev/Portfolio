@@ -1,5 +1,5 @@
-import React from 'react';
-import Navber from "./Components/Navber"; 
+// import Navber from "../Components/Navber"; 
+import Hero from "./Components/Hero"; 
 import About from "./Components/About"; 
 import MySkills from "./Components/MySkills"; 
 import Projects from "./Components/Projects"; 
@@ -10,7 +10,8 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <>
-      <Navber />
+      {/* <Navber/> */}
+      <Hero/>
       <About/>
       <MySkills/>
       <Projects/>

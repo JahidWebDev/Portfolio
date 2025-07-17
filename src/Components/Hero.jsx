@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import profile from "../assets/profile.jpg";
 
-const Navbar = () => {
+const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -19,8 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="min-h-screen bg-[#1f1f1f] text-white px-6 md:px-20 py-10">
-      {/* Navbar */}
-      <nav className="sticky top-0 left-0 right-0 z-50 px-6 py-4 shadow-md 
+          <nav className="sticky top-0 left-0 right-0 z-50 px-6 py-4 shadow-md 
                 bg-[#1f1f1f]/30 backdrop-blur-md backdrop-saturate-150 
                 border-b border-white/10 text-white">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -80,54 +79,53 @@ const Navbar = () => {
       </nav>
 
       {/* Hero Section */}
-     <section className="bg-[#1a1a1a] text-white min-h-screen flex items-center justify-between px-5 md:px-19">
-      {/* Left Content */}
-      <div className="flex-1 space-y-6">
-        <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
-       <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-slate-100">
-  <Typewriter
-    words={[
-      'MERN Stack Developer',
-      'Frontend Developer',
-      'Graphic Designer',
-    ]}
-    loop={0}
-    cursor
-    cursorStyle="|"
-    typeSpeed={70}
-    deleteSpeed={50}
-    delaySpeed={1000}
-  />
-</h1>
-        <p className="mt-4 text-xl text-gray-300">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
-        <div className="space-x-4 pt-4">
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md"
-          >
-            Download Resume
-          </a>
-          <a
-            href="#contact"
-            className="inline-block border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md"
-          >
-            Contact Me
-          </a>
+      <section className="bg-[#1a1a1a] text-white min-h-screen flex items-center justify-between px-5 md:px-19">
+        {/* Left Content */}
+        <div className="flex-1 space-y-6">
+          <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-slate-100">
+            <Typewriter
+              words={[
+                'MERN Stack Developer',
+                'Frontend Developer',
+                'Graphic Designer',
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h1>
+          <p className="mt-4 text-xl text-gray-300">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
+          <div className="space-x-4 pt-4">
+            <a
+              href="/resume.pdf"
+              className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md"
+            >
+              Download Resume
+            </a>
+            <a
+              href="#contact"
+              className="inline-block border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md"
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
-      </div>
 
-      {/* Right Content */}
-      <div className="hidden md:block flex-1 text-center">
-        <img
-          src={profile}
-          alt="Zahid Hossen"
-          className="w-64 h-64 rounded-xl object-cover mx-auto"
-        />
-      </div>
-    </section>
+        {/* Right Content */}
+        <div className="hidden md:block flex-1 text-center">
+          <img
+            src={profile}
+            alt="Zahid Hossen"
+            className="w-64 h-64 rounded-xl object-cover mx-auto"
+          />
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Navbar;
+export default Hero;
