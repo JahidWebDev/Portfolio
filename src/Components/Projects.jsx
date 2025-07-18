@@ -1,5 +1,7 @@
 import React from "react";
 import image1 from "../assets/images-1.png";
+import image2 from "../assets/images-2.png";
+import image3 from "../assets/images-3.png";
 
 const projects = [
   {
@@ -8,23 +10,23 @@ const projects = [
     description:
       "A modern admin dashboard for managing products, orders, and users. Built using React, Node.js, and MongoDB. Fully responsive and feature-rich.",
     live: "https://ecom-dashboard.vercel.app",
-    github: "https://github.com/yourusername/ecom-dashboard",
+    github: "https://github.com/JahidWebDev/ecommerceapi",
   },
   {
     title: "Portfolio Website",
-        image: image1,
+        image: image2,
     description:
       "Personal portfolio to showcase projects and skills. Built using React, Tailwind CSS, and deployed with Vercel. Focuses on minimal UX/UI.",
     live: "https://yourportfolio.vercel.app",
     github: "https://github.com/yourusername/portfolio",
   },
   {
-    title: "Blog API",
-       image: image1,
+    title: "Ajency Website",
+       image: image3,
     description:
       "A secure and scalable REST API for blog management. Includes JWT auth, CRUD operations, and MongoDB integration.",
-    live: "https://blog-api-demo.vercel.app",
-    github: "https://github.com/yourusername/blog-api",
+    live: "https://my-project-one-puce.vercel.app/",
+    github: "https://github.com/JahidWebDev/Ajency-website",
   },
 ];
 

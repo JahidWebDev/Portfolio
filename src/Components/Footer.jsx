@@ -29,7 +29,7 @@ const Footer = () => {
             <FaFacebook />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-linkedin" // Optional: Replace with real link
+            href="https://www.linkedin.com/in/jahid227mernfullstackdeveloperbd/" // Optional: Replace with real link
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"

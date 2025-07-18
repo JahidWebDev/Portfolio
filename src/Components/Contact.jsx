@@ -1,7 +1,33 @@
-import React from "react";
-import { FaEnvelope, FaPhone, FaGithub, FaFacebook } from "react-icons/fa";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vrfxqa8",    
+        "template_jftpe7b", 
+        form.current,
+        "VV_o1hjWQVsWaOnT7"     
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.error(error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -40,26 +66,33 @@ const Contact = () => {
                 >
                   <FaGithub className="text-blue-400" />
                 </a>
+                
                 <a
-                  href="https://www.facebook.com/jahid.sheikh.677380/"
+                  href="https://www.linkedin.com/in/jahid227mernfullstackdeveloperbd/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
-                  aria-label="Facebook"
+                  aria-label="LinkedIn"
                 >
-                  <FaFacebook className="text-blue-400" />
+                  <FaLinkedin className="text-blue-400" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-6">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="space-y-6"
+          >
             <div>
               <label className="block text-sm mb-1">Name</label>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Your Name"
+                required
                 className="w-full px-4 py-2 rounded bg-[#1e1e1e] border border-gray-600 focus:outline-none focus:border-blue-400"
               />
             </div>
@@ -67,15 +100,19 @@ const Contact = () => {
               <label className="block text-sm mb-1">Email</label>
               <input
                 type="email"
+                name="user_email"
                 placeholder="Your Email"
+                required
                 className="w-full px-4 py-2 rounded bg-[#1e1e1e] border border-gray-600 focus:outline-none focus:border-blue-400"
               />
             </div>
             <div>
               <label className="block text-sm mb-1">Message</label>
               <textarea
+                name="message"
                 rows="4"
                 placeholder="Your Message"
+                required
                 className="w-full px-4 py-2 rounded bg-[#1e1e1e] border border-gray-600 focus:outline-none focus:border-blue-400"
               ></textarea>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/jahid.jpg";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen bg-[#1f1f1f] text-white px-6 md:px-20 py-10">
-          <nav className="sticky top-0 left-0 right-0 z-50 px-6 py-4 shadow-md 
+      <nav className="sticky top-0 left-0 right-0 z-50 px-6 py-4 shadow-md 
                 bg-[#1f1f1f]/30 backdrop-blur-md backdrop-saturate-150 
                 border-b border-white/10 text-white">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -99,31 +99,40 @@ const Hero = () => {
             />
           </h1>
           <p className="mt-4 text-xl text-gray-300">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
-          <div className="space-x-4 pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 pt-4 space-y-4 sm:space-y-0">
             <a
               href="/resume.pdf"
-              className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md"
+              className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-center"
             >
               Download Resume
             </a>
             <a
               href="#contact"
-              className="inline-block border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md"
+              className="inline-block border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md text-center"
             >
               Contact Me
             </a>
           </div>
+
         </div>
 
         {/* Right Content */}
-        <div className="hidden md:block flex-1 text-center">
+        {/* <div className="hidden md:block flex-1 text-center">
           <img
             src={profile}
             alt="Zahid Hossen"
             className="w-64 h-64 rounded-xl object-cover mx-auto"
           />
+        </div> */}
+        <div className="hidden md:block flex-1 text-center">
+          <img
+            src={profile}
+            alt="Zahid Hossen"
+            className="w-64 h-90 rounded-xl object-cover mx-auto grayscale hover:grayscale-0 transition duration-500"
+          />
         </div>
-      </section>
+
+      </section> 
     </div>
   );
 };
