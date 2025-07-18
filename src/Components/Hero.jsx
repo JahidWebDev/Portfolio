@@ -83,7 +83,7 @@ const Hero = () => {
         {/* Left Content */}
         <div className="flex-1 space-y-6">
           <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-slate-100">
+          <h1 className="text-4xl md:text-4xl font-extrabold leading-tight text-slate-100">
             <Typewriter
               words={[
                 'MERN Stack Developer',
