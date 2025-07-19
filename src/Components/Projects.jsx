@@ -17,8 +17,8 @@ const projects = [
         image: image2,
     description:
       "Personal portfolio to showcase projects and skills. Built using React, Tailwind CSS, and deployed with Vercel. Focuses on minimal UX/UI.",
-    live: "https://yourportfolio.vercel.app",
-    github: "https://github.com/yourusername/portfolio",
+    live: "",
+    github: "https://github.com/JahidWebDev/Portfolio",
   },
   {
     title: "Ajency Website",

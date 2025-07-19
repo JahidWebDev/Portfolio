@@ -100,12 +100,13 @@ const Hero = () => {
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-500">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 pt-4 space-y-4 sm:space-y-0">
-            <a
-              href="/resume.pdf"
-              className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-center"
-            >
-              Download Resume
-            </a>
+       <a
+  href="/resume.pdf"
+  download
+  className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-center"
+>
+  Download Resume
+</a>
             <a
               href="#contact"
               className="inline-block border border-white hover:bg-white hover:text-black px-6 py-2 rounded-md text-center"
