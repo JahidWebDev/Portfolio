@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
-import profile from "../assets/jahid.jpg";
+import profile from "../assets/jahid-hossen.jpg";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -125,11 +125,11 @@ const Hero = () => {
             className="w-64 h-64 rounded-xl object-cover mx-auto"
           />
         </div> */}
-        <div className="hidden md:block flex-1 text-center">
+        <div className="hidden md:block transform rotate-right-100 flex-1 text-center">
           <img
             src={profile}
             alt="Zahid Hossen"
-            className="w-64 h-90 rounded-xl object-cover mx-auto grayscale hover:grayscale-0 transition duration-500"
+            className="w-64 h-90 rounded-xl object-cover mx-auto  hover:grayscale-70 transition duration-500"
           />
         </div>
 
