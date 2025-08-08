@@ -18,9 +18,9 @@ const Hero = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1f1f1f] text-white px-6 md:px-20 py-10">
+    <div className="min-h-screen  bg-[#0f0c0c] text-white px-6 md:px-20 py-10">
       <nav className="sticky top-0 left-0 right-0 z-50 px-6 py-4 shadow-md 
-                bg-[#1f1f1f]/30 backdrop-blur-md backdrop-saturate-150 
+                bg-[#0f0c0c]/30 backdrop-blur-md backdrop-saturate-150 
                 border-b border-white/10 text-white">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-semibold">ZahidHossen</h1>
@@ -39,7 +39,7 @@ const Hero = () => {
             href="https://github.com/JahidWebDev"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-6 text-xl hover:text-gray-400 hidden md:inline"
+            className="ml-6 text-2xl text-blue-500 hover:text-gray-400 hidden md:inline"
           >
             <FaGithub />
           </a>
@@ -79,11 +79,12 @@ const Hero = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-[#1a1a1a] text-white min-h-screen flex items-center justify-between px-5 md:px-19">
+      <section className="bg-[#000000]  text-white min-h-screen flex items-center justify-between px-4 md:px-19">
         {/* Left Content */}
-        <div className="flex-1 space-y-6">
-          <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
-          <h1 className="text-2xl md:text-6xl font-extrabold leading-tight text-slate-100">
+        <div className="flex-2 space-y-6 ">
+         <div className="ml-28">
+              <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
+          <h1 className="text-6xl md:text-6xl font-extrabold leading-tight text-slate-100">
             <Typewriter
               words={[
                 'MERN Stack Developer',
@@ -103,7 +104,7 @@ const Hero = () => {
             <a
               href="/resume.pdf"
               download
-              className="inline-block bg-blue-400 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-center"
+              className="inline-block bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-center"
             >
               Download Resume
             </a>
@@ -114,6 +115,7 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
+         </div>
 
         </div>
 

@@ -3,13 +3,13 @@ import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-gray-400 py-6 px-4 ">
+    <footer className="bg-[#000000] text-gray-400 py-6 px-4 ">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Copyright */}
         <p className="text-sm">&copy; {new Date().getFullYear()} Zahid Hossen. All rights reserved.</p>
 
         {/* Social Icons */}
-        <div className="flex gap-4 text-xl">
+        <div className="flex gap-4 text-xl  text-blue-400">
           <a
             href="https://github.com/JahidWebDev"
             target="_blank"

@@ -35,12 +35,12 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="bg-[#121212] text-white px-6 md:px-20 py-20">
+    <section id="experience" className="bg-[#000000] text-white px-6 md:px-20 py-20">
      <div className="flex items-center gap-4 mb-12">
       <h2 className="text-5xl font-bold text-blue-400 capitalize whitespace-nowrap">
         Courses
       </h2>
-      <div className="flex-grow h-[2px] bg-blue-400"></div>
+      {/* <div className="flex-grow h-[2px] bg-blue-400"></div> */}
     </div>
       <div className="space-y-10">
         {experiences.map((exp, index) => (

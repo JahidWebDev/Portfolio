@@ -32,12 +32,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-[#1f1f1f] text-white px-6 md:px-20 py-20" id="projects">
+    <section className="bg-[#000000] text-white px-6 md:px-20 py-20" id="projects">
      <div className="flex items-center gap-4 mb-12">
       <h2 className="text-5xl font-bold text-blue-400 capitalize whitespace-nowrap">
         Projects
       </h2>
-      {/* <div className="flex-grow h-[2px] bg-blue-600"></div> */}
+      {/* <div className="flex-grow h-[2px] bg-blue-400"></div> */}
     </div>
       <div className="grid md:grid-cols-3 gap-8">
         {projects.map((project, index) => (

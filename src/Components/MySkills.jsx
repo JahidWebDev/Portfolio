@@ -35,7 +35,7 @@ const skills = [
 
 const MySkills = () => {
     return (
-       <section id="skills" className="bg-[#1f1f1f] text-white px-6 md:px-20 py-16">
+       <section id="skills" className="bg-[#0f0c0c] text-white px-6 md:px-20 py-16">
   <div className=" min-h-screen mx-auto px-4">
     {/* Title */}
     <div className="flex items-center blue-600 gap-4 mb-12">
@@ -95,14 +95,14 @@ const MySkills = () => {
         </ul>
       </div>
     </div>
-     <section id="skills" className="bg-[#1a1a1a] text-white mt-10 px-6 md:px-20 py-16">
+     <section id="skills" className=" text-white mt-10 px-6 md:px-20 py-16">
       <div className="max-w-6xl mx-auto">
       
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-4 bg-[#1f1f1f] rounded-xl shadow-md hover:scale-105 transition-transform duration-300 group"
+              className="flex flex-col items-center justify-center p-4 bg-[#000000] rounded-xl shadow-md hover:scale-105 md:hover:shadow-blue-500/100 transition-transform duration-300 group"
             >
               <div
                 className="mb-2 transition-colors duration-300"
