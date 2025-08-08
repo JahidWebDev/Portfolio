@@ -99,7 +99,7 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </h1>
-          <p className="mt-4 text-[16px] md:text-xl text-gray-400">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
+          <p className="mt-4 text-[14px] md:text-xl text-gray-400">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 pt-4 space-y-4 sm:space-y-0">
             <a
               href="/resume.pdf"
