@@ -82,9 +82,9 @@ const Hero = () => {
       <section className="bg-[#000000]  text-white min-h-screen flex items-center justify-between px-4 md:px-19">
         {/* Left Content */}
         <div className="flex-2 space-y-6 ">
-         <div className="block-ml-28">
+         <div className="md:ml-28">
               <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
-          <h1 className="block-text-6xl md:text-6xl font-extrabold leading-tight text-slate-100">
+          <h1 className="text-[30px] md:text-6xl font-extrabold leading-tight text-slate-100">
             <Typewriter
               words={[
                 'MERN Stack Developer',
@@ -99,7 +99,7 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-400">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
+          <p className="mt-4 text-[16px] md:text-xl text-gray-400">I’m a passionate MERN Stack Developer, creative Frontend Developer, and visual storyteller through Graphic Design — turning ideas into powerful digital experiences.</p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 pt-4 space-y-4 sm:space-y-0">
             <a
               href="/resume.pdf"
