@@ -82,9 +82,9 @@ const Hero = () => {
       <section className="bg-[#000000]  text-white min-h-screen flex items-center justify-between px-4 md:px-19">
         {/* Left Content */}
         <div className="flex-2 space-y-6 ">
-         <div className="ml-28">
+         <div className="block-ml-28">
               <h3 className="text-lg text-gray-400">Hello, I’m Zahid Hossen,</h3>
-          <h1 className="text-6xl md:text-6xl font-extrabold leading-tight text-slate-100">
+          <h1 className="block-text-6xl md:text-6xl font-extrabold leading-tight text-slate-100">
             <Typewriter
               words={[
                 'MERN Stack Developer',
