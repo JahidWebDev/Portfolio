@@ -1,10 +1,5 @@
-/* In your global CSS file */
 @import "tailwindcss";
 
-/* Enable dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
-
-/* Add these additional styles */
 :root {
   color-scheme: light dark;
 }
@@ -13,34 +8,50 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar {
-  width: 10px;
+/* ===== Light mode scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* white track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* light gray thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* ===== Dark mode scrollbar ===== */
 .dark ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #111;
 }
 
 .dark ::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 5px;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: #555;
 }
 
-@theme {
-  --font-display: "Satoshi", "sans-serif";
-  --breakpoint-3xl: 120rem;
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
-  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-  /* ... */
+
+/* Social icon reusable */
+.social {
+  padding: 12px;
+  border-radius: 9999px;
+  border: 1px solid #9ca3af;
+  transition: all 0.3s;
+}
+.social:hover {
+  background: #111;
+  color: white;
+}
+.dark .social:hover {
+  background: white;
+  color: black;
 }
