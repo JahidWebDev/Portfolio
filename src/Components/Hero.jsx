@@ -296,46 +296,60 @@ const Hero = () => {
 
     {/* ================= RIGHT CONTENT ================= */}
     <div className="relative mt-10 lg:mt-0">
-      <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+    <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto lg:mx-0 group">
 
-        {/* Glow */}
-        <div className="absolute -inset-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-3xl blur-2xl opacity-20"></div>
+  {/* Glow */}
+  <div className="absolute -inset-6 bg-gradient-to-r from-[#BAEF00] via-emerald-500 to-cyan-500 rounded-3xl blur-2xl opacity-20"></div>
 
-        {/* Image */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-          <img
-            src={profile}
-            alt="Zahid Hossen"
-            className="w-full h-auto object-cover"
-          />
+  {/* Image Container */}
+  <div className="relative">
+    <img
+      src={profile}
+      alt="Zahid Hossen"
+      className={`relative z-10 w-full h-auto object-cover border-2 rounded-[10px]
+                  transition-all duration-700 group-hover:scale-105 group-hover:shadow-xl
+                  ${darkMode 
+                    ? "border-white/80 shadow-lg shadow-black/40" 
+                    : "border-gray-900/80 shadow-lg shadow-gray-400/20"
+                  }`}
+    />
 
-          {/* Floating Badge */}
-          <div
-            className={`absolute bottom-4 sm:bottom-8 left-4 sm:left-8 px-4 sm:px-6 py-2 sm:py-3 rounded-xl backdrop-blur-sm shadow-lg
-                        ${darkMode ? "bg-gray-900/90" : "bg-white/90"}`}
-          >
-            <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center">
-                <FaGithub className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <div>
-                <p className={`text-sm sm:text-base ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-                  GitHub Projects
-                </p>
-                <p className={`text-lg sm:text-xl font-bold ${darkMode ? "text-white" : "text-gray-900"}`}>
-                  50+
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    {/* Image Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent 
+                    transition-all duration-500 rounded-[10px] z-10"></div>
 
-        {/* Experience Badge */}
-        <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-gradient-to-br from-orange-500 to-pink-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-xl">
-          <p className="font-bold text-sm sm:text-lg">3+ Years</p>
-          <p className="text-xs sm:text-sm opacity-90">Experience</p>
-        </div>
+    {/* GitHub Projects Badge */}
+<div className="absolute bottom-4 left-4 z-20">
+  <div className={`p-3 sm:p-4 rounded-xl shadow-2xl border
+                  ${darkMode 
+                    ? "bg-gray-900/90 border-gray-800" 
+                    : "bg-white/90 border-gray-100"
+                  } backdrop-blur-md`}>
+    <div className="flex items-start space-x-2 sm:space-x-3">
+      <div className="w-10 h-10 text-center align-middle sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-[#BAEF00] to-emerald-500 
+                      flex items-center justify-center">
+        <FaGithub className="w-7 h-7 sm:w-6 sm:h-6 text-white" />
       </div>
+      <div>
+        <p className={`text-xs uppercase tracking-wider font-semibold 
+                      ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+          Active Projects
+        </p>
+        <p className={`text-2xl sm:text-3xl font-bold mt-1 ${darkMode ? "text-white" : "text-gray-900"}`}>
+          50+
+        </p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+
+</div>
     </div>
 
   </div>
