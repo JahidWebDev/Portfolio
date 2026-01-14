@@ -56,7 +56,7 @@ const Hero = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaGithub />, href: "https://github.com/JahidWebDev", label: "GitHub" },
+    
     { icon: <FaLinkedinIn />, href: "#", label: "LinkedIn" },
     { icon: <FaFacebook />, href: "#", label: "Facebook" },
     { icon: <FaInstagram />, href: "#", label: "Instagram" },
@@ -77,18 +77,31 @@ const Hero = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className={`font-medium transition-colors duration-300 group ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
-                >
-                  {link.name}
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500"></span>
-                </a>
-              ))}
-            </div>
+<div className="hidden md:flex items-center space-x-10">
+  {navLinks.map((link) => (
+    <a
+      key={link.name}
+      href={link.href}
+      className={`relative px-3 py-2 font-medium group
+      transition-all duration-300 rounded-lg
+      ${darkMode
+        ? "text-gray-300 hover:text-white hover:bg-white/5 hover:backdrop-blur-md"
+        : "text-gray-700 hover:text-gray-900 hover:bg-black/5"
+      } hover:shadow-lg`}
+    >
+      {link.name}
+
+      <span className="absolute left-0 -bottom-1 h-[2px] w-full
+      bg-gradient-to-r from-orange-500 to-pink-500
+      scale-x-0 origin-left transition-transform duration-300
+      group-hover:scale-x-100" />
+    </a>
+  ))}
+</div>
+
+
+
+
 
             {/* Right Section */}
             <div className="flex items-center space-x-4">
@@ -184,7 +197,7 @@ const Hero = () => {
 
       {/* Hero Section */}
  <section className="relative py-16 sm:py-20 overflow-hidden">
-  <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-48 items-center">
 
     {/* ================= LEFT CONTENT ================= */}
     <div className="space-y-6 sm:space-y-8 lg:space-y-10">
@@ -200,7 +213,7 @@ const Hero = () => {
       >
         <div
           className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full animate-pulse 
-                      ${darkMode ? "bg-white" : "bg-[#6dd900]"}`}
+                      ${darkMode ? "bg-[#6dd900]" : "bg-[#6dd900]"}`}
         ></div>
         <span className="text-xs sm:text-sm font-semibold tracking-wide">
           Frontend / MERN Stack Developer
@@ -270,28 +283,83 @@ const Hero = () => {
       </div>
 
       {/* Social Links */}
-      <div className="pt-4 sm:pt-6">
-        <p className={`mb-2 sm:mb-4 text-sm sm:text-base ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-          Connect with me
-        </p>
-        <div className="flex space-x-2 sm:space-x-4">
-          {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center
-                          transition-all duration-300 hover:-translate-y-1
-                          hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:text-white
-                          ${darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-100 text-gray-800"}`}
-            >
-              {social.icon}
-            </a>
-          ))}
+     <div className="pt-4 sm:pt-6">
+  <p className={`mb-2 sm:mb-4 text-sm sm:text-base ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
+    Connect with me
+  </p>
+<div className="flex flex-wrap justify-start gap-3 sm:gap-4 lg:gap-3">
+  {socialLinks.map((social, index) => {
+
+    const colorSchemes = [
+      { from: "#F59E0B", to: "#EC4899" },
+      { from: "#3B82F6", to: "#8B5CF6" },
+      { from: "#10B981", to: "#0EA5E9" },
+      { from: "#EF4444", to: "#F97316" },
+      { from: "#8B5CF6", to: "#EC4899" },
+    ];
+
+    const scheme = colorSchemes[index % colorSchemes.length];
+
+    return (
+      <a
+        key={social.label}
+        href={social.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={social.label}
+        className={`group relative
+        w-11 h-11 sm:w-14 sm:h-14
+        rounded-xl flex items-center justify-center
+        transition-all duration-300
+        hover:-translate-y-1
+        active:scale-95
+        border
+        ${darkMode
+          ? "bg-gray-900 border-white/10 text-gray-300"
+          : "bg-white border-black/10 text-gray-700"
+        }`}
+        style={{
+          "--from": scheme.from,
+          "--to": scheme.to,
+        }}
+      >
+        {/* Hover BG */}
+        <div
+          className="absolute inset-0 rounded-xl opacity-0
+          sm:group-hover:opacity-100
+          transition-opacity duration-300
+          bg-gradient-to-br from-[var(--from)] to-[var(--to)]"
+        />
+
+        {/* Icon */}
+        <div className="relative z-10 transition-colors duration-300
+        ">
+          {social.icon}
         </div>
-      </div>
+
+        {/* Glow (desktop only) */}
+        <div
+          className="absolute inset-0 rounded-xl opacity-0
+          sm:group-hover:opacity-100
+          blur-lg transition-opacity duration-300
+          bg-gradient-to-br from-[var(--from)] to-[var(--to)]"
+        />
+
+        {/* Tooltip (hide on mobile) */}
+        <div
+          className={`hidden sm:block absolute -top-9 left-1/2 -translate-x-1/2
+          px-2 py-1 rounded-md text-xs
+          opacity-0 group-hover:opacity-100 transition-all duration-200
+          ${darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-900 text-white"}`}
+        >
+          {social.label}
+        </div>
+      </a>
+    );
+  })}
+</div>
+
+</div>
     </div>
 
     {/* ================= RIGHT CONTENT ================= */}
@@ -303,16 +371,18 @@ const Hero = () => {
 
   {/* Image Container */}
   <div className="relative">
-    <img
-      src={profile}
-      alt="Zahid Hossen"
-      className={`relative z-10 w-full h-auto object-cover border-2 rounded-[10px]
-                  transition-all duration-700 group-hover:scale-105 group-hover:shadow-xl
-                  ${darkMode 
-                    ? "border-white/80 shadow-lg shadow-black/40" 
-                    : "border-gray-900/80 shadow-lg shadow-gray-400/20"
-                  }`}
-    />
+<img
+  src={profile}
+  alt="Zahid Hossen"
+  className={`relative z-10  w-full h-auto object-cover rounded-[12px]
+  border transition-all duration-700
+  group-hover:scale-105 group-hover:shadow-2xl
+  ${darkMode
+    ? "border-white/15 shadow-black/40"
+    : "border-black/10 shadow-black/20"
+  }`}
+ />
+
 
     {/* Image Overlay */}
     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent 
@@ -326,16 +396,24 @@ const Hero = () => {
                     : "bg-white/90 border-gray-100"
                   } backdrop-blur-md`}>
     <div className="flex items-start space-x-2 sm:space-x-3">
-      <div className="w-10 h-10 text-center align-middle sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-[#BAEF00] to-emerald-500 
-                      flex items-center justify-center">
-        <FaGithub className="w-7 h-7 sm:w-6 sm:h-6 text-white" />
-      </div>
+ <div
+  className={`w-10 h-10 lg:mt-1 sm:w-12 sm:h-12 rounded-lg
+  flex items-center justify-center
+  bg-gradient-to-br from-[#BAEF00] to-emerald-500
+  ${darkMode ? "shadow-md shadow-emerald-500/20" : "shadow-lg shadow-emerald-500/30"}`}
+>
+  <FaGithub
+    className={`w-10 h-10 sm:w-7 sm:h-7
+    ${darkMode ? "text-white" : "text-black"}`}
+  />
+</div>
+
       <div>
         <p className={`text-xs uppercase tracking-wider font-semibold 
-                      ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                      ${darkMode ? "text-white" : "text-black"}`}>
           Active Projects
         </p>
-        <p className={`text-2xl sm:text-3xl font-bold mt-1 ${darkMode ? "text-white" : "text-gray-900"}`}>
+        <p className={`text-2xl sm:text-3xl  font-bold mt-1 ${darkMode ? "text-[#6dd900]" : "text-[#6dd900]"}`}>
           50+
         </p>
        

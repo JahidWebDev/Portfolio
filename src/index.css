@@ -55,3 +55,14 @@
   background: white;
   color: black;
 }
+
+
+/* 添加到全局CSS */
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.group:hover .icon-container {
+  animation: gentlePulse 0.5s ease-in-out;
+}
